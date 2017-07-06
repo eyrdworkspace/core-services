@@ -1,4 +1,3 @@
-
 /*
  * eGov suite of products aim to improve the internal efficiency,transparency,
  * accountability and the service delivery of the government  organizations.
@@ -39,23 +38,47 @@
  *  In case of any queries, you can reach eGovernments Foundation at contact@egovernments.org.
  */
 
-package org.egov.boundary.web.contract.factory;
+package org.egov.access.web.errorhandlers;
 
-import org.egov.common.contract.request.RequestInfo;
-import org.egov.common.contract.response.ResponseInfo;
-import org.springframework.stereotype.Component;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
 
-@Component
-public class ResponseInfoFactory {
+import javax.validation.constraints.NotNull;
 
-	public ResponseInfo createResponseInfoFromRequestInfo(final RequestInfo requestInfo, final Boolean success) {
-		final String apiId = requestInfo != null ? "org.egov.boundary" : "";
-		final String ver = requestInfo != null ? requestInfo.getVer() : "";
-		final String ts = requestInfo != null ? requestInfo.getTs().toString() : "";
-		final String resMsgId = "uief87324"; // FIXME : Hard-coded
-		final String msgId = requestInfo != null ? requestInfo.getMsgId() : "";
-		final String responseStatus = success ? "successful" : "failed";
-		return new ResponseInfo(apiId, ver, ts, resMsgId, msgId, responseStatus);
-	}
+import org.egov.common.contract.response.ErrorField;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
+@EqualsAndHashCode
+@Builder
+public class Error {
+
+	@NotNull
+	private Integer code;
+
+	@NotNull
+	private String message;
+
+	private String description;
+
+	private List<ErrorField> errorFields;
+
+	/**
+	 * FIXME : If we take List of Object, it will generate twice the actual
+	 * result. On first line, the key & on next line the value. PROPOSITION :
+	 * Can take Map instead where Key is fieldName, Value is Error description
+	 */
+	private Map<String, Object> fields = new LinkedHashMap<>();
 }

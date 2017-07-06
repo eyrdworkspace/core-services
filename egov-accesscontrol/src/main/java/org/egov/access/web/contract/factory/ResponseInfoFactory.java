@@ -1,4 +1,3 @@
-
 /*
  * eGov suite of products aim to improve the internal efficiency,transparency,
  * accountability and the service delivery of the government  organizations.
@@ -39,7 +38,7 @@
  *  In case of any queries, you can reach eGovernments Foundation at contact@egovernments.org.
  */
 
-package org.egov.boundary.web.contract.factory;
+package org.egov.access.web.contract.factory;
 
 import org.egov.common.contract.request.RequestInfo;
 import org.egov.common.contract.response.ResponseInfo;
@@ -49,7 +48,7 @@ import org.springframework.stereotype.Component;
 public class ResponseInfoFactory {
 
 	public ResponseInfo createResponseInfoFromRequestInfo(final RequestInfo requestInfo, final Boolean success) {
-		final String apiId = requestInfo != null ? "org.egov.boundary" : "";
+		final String apiId = requestInfo != null ? requestInfo.getApiId() : "";
 		final String ver = requestInfo != null ? requestInfo.getVer() : "";
 		final String ts = requestInfo != null ? requestInfo.getTs().toString() : "";
 		final String resMsgId = "uief87324"; // FIXME : Hard-coded
