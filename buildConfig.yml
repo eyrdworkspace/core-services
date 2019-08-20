@@ -1,126 +1,126 @@
 config:
   - name: "core-services/egov-accesscontrol"
-    buildConfigs:
+    build:
       - context: "egov-accesscontrol"
         imageName: "egov-accesscontrol"
       - context: "egov-accesscontrol/src/main/resources/db"
         imageName: "egov-accesscontrol-db"
   - name: "core-services/egov-common-masters"
-    buildConfigs:
+    build:
       - context: "egov-common-masters"
         imageName: "egov-common-masters"
       - context: "egov-common-masters/src/main/resources/db"
         imageName: "egov-common-masters-db"
   - name: "core-services/egov-data-uploader"
-    buildConfigs:
+    build:
       - context: "egov-data-uploader"
         imageName: "egov-data-uploader"
       - context: "egov-data-uploader/src/main/resources/db"
         imageName: "egov-data-uploader-db"
   - name: "core-services/egov-enc-service"
-    buildConfigs:
+    build:
       - context: "egov-enc-service"
         imageName: "egov-enc-service"
       - context: "egov-enc-service/src/main/resources/db"
         imageName: "egov-enc-service-db"
   - name: "core-services/egov-filestore"
-    buildConfigs:
+    build:
       - context: "egov-filestore"
         imageName: "egov-filestore"
       - context: "egov-filestore/src/main/resources/db"
         imageName: "egov-filestore-db"
   - name: "core-services/egov-idgen"
-    buildConfigs:
+    build:
       - context: "egov-idgen"
         imageName: "egov-idgen"
       - context: "egov-idgen/src/main/resources/db"
         imageName: "egov-idgen-db"
   - name: "core-services/egov-indexer"
-    buildConfigs:
+    build:
       - context: "egov-indexer"
         imageName: "egov-indexer"
       - context: "egov-indexer/src/main/resources/db"
         imageName: "egov-indexer-db"
   - name: "core-services/egov-localization"
-    buildConfigs:
+    build:
       - context: "egov-localization"
         imageName: "egov-localization"
       - context: "egov-localization/src/main/resources/db"
         imageName: "egov-localization-db"
   - name: "core-services/egov-location"
-    buildConfigs:
+    build:
       - context: "egov-location"
         imageName: "egov-location"
       - context: "egov-location/src/main/resources/db"
         imageName: "egov-location-db"
   - name: "core-services/egov-mdms-create"
-    buildConfigs:
+    build:
       - context: "egov-mdms-create"
         imageName: "egov-mdms-create"
       - context: "egov-mdms-create/src/main/resources/db"
         imageName: "egov-mdms-create-db"
   - name: "core-services/egov-mdms-service"
-    buildConfigs:
+    build:
       - context: "egov-mdms-service"
         imageName: "egov-mdms-service"
       - context: "egov-mdms-service/src/main/resources/db"
         imageName: "egov-mdms-service-db"
   - name: "core-services/egov-notification-mail"
-    buildConfigs:
+    build:
       - context: "egov-notification-mail"
         imageName: "egov-notification-mail"
       - context: "egov-notification-mail/src/main/resources/db"
         imageName: "egov-notification-mail-db"
   - name: "core-services/egov-notification-sms"
-    buildConfigs:
+    build:
       - context: "egov-notification-sms"
         imageName: "egov-notification-sms"
       - context: "egov-notification-sms/src/main/resources/db"
         imageName: "egov-notification-sms-db"
   - name: "core-services/egov-otp"
-    buildConfigs:
+    build:
       - context: "egov-otp"
         imageName: "egov-otp"
       - context: "egov-otp/src/main/resources/db"
         imageName: "egov-otp-db"
   - name: "core-services/egov-persister"
-    buildConfigs:
+    build:
       - context: "egov-persister"
         imageName: "egov-persister"
       - context: "egov-persister/src/main/resources/db"
         imageName: "egov-persister-db"
   - name: "core-services/egov-pg-service"
-    buildConfigs:
+    build:
       - context: "egov-pg-service"
         imageName: "egov-pg-service"
       - context: "egov-pg-service/src/main/resources/db"
         imageName: "egov-pg-service-db"
   - name: "core-services/egov-searcher"
-    buildConfigs:
+    build:
       - context: "egov-searcher"
         imageName: "egov-searcher"
       - context: "egov-searcher/src/main/resources/db"
         imageName: "egov-searcher-db"
   - name: "core-services/egov-telemetry"
-    buildConfigs:
+    build:
       - context: "egov-telemetry"
         imageName: "egov-telemetry"
       - context: "egov-telemetry/src/main/resources/db"
         imageName: "egov-telemetry-db"
   - name: "core-services/egov-user"
-    buildConfigs:
+    build:
       - context: "egov-user"
         imageName: "egov-user"
       - context: "egov-user/src/main/resources/db"
         imageName: "egov-user-db"
   - name: "core-services/notification"
-    buildConfigs:
+    build:
       - context: "notification"
         imageName: "notification"
       - context: "notification/src/main/resources/db"
         imageName: "notification-db"
   - name: "core-services/tenant"
-    buildConfigs:
+    build:
       - context: "tenant"
         imageName: "tenant"
       - context: "tenant/src/main/resources/db"
